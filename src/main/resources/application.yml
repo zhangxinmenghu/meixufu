@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: reggie
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/reggie?serverTimezone=UTC&useSSL=false
+    username: root
+    password: root
+  web:
+    resources:
+      static-locations: classpath:/static/
+
+
+mybatis-plus:
+  configuration:
+    #��ӳ��ʵ���������ʱ�������ݿ��б������ֶ����е��»���ȥ���������շ�������ӳ��
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      #ѩ���㷨���ɷֲ�ʽ����id
+      id-type: assign_id
+
+server:
+  port: 8080
+
+
+
+reggie:
+  path: D:\img\
